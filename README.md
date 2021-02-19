@@ -61,4 +61,15 @@ app.use(express.json());
 ```
 
 ## Deploy to Heroku
+
 1. `git add .` -> `git commit -m `
+2. `heroku create`
+3. Add three more scripts to server package.json
+
+``` javascript
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+```
+
+4. `git push heroku main`
