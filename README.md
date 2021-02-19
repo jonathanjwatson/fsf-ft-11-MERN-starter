@@ -72,4 +72,11 @@ app.use(express.json());
     "heroku-postbuild": "npm run build"
 ```
 
-4. `git push heroku main`
+4. Add express static to server up the build folder.
+
+``` javascript
+app.use(express.static("client/build"));
+```
+
+5. Add a wildcard route to serve up the client index.html
+6. `git push heroku main`
