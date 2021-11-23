@@ -1,28 +1,18 @@
 {
-  "name": "fsf-ft-11-MERN-starter",
+  "name": "PhotographerPhinder",
   "version": "1.0.0",
   "description": "## Basic Server Setup 1. `touch server.js` 2. `npm init -y` 3. `npm install express mongoose`",
   "main": "server.js",
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:prod": "node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
-    "client": "cd client && npm run start",
-    "install": "cd client && npm install",
-    "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jonathanjwatson/fsf-ft-11-MERN-starter.git"
+    "start": "node server/server.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "build": "cd client && npm run build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jonathanjwatson/fsf-ft-11-MERN-starter/issues"
-  },
-  "homepage": "https://github.com/jonathanjwatson/fsf-ft-11-MERN-starter#readme",
+  "homepage": "",
   "dependencies": {
     "express": "^4.17.1",
     "if-env": "^1.0.4",
